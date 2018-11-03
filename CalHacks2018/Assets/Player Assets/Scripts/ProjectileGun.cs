@@ -11,59 +11,38 @@ public class ProjectileGun : MonoBehaviour {
     /// <summary>
     /// We store what type of gun we currently have
     /// </summary>
-    public int gunType
-    {
-        get; set;
-    }
+    public GunController.guntype gunType;
 
     /// <summary>
     /// We store the type of ammo we are currently using
     /// </summary>
-    public int ammoType
-    {
-        get; set;
-    }
+    public GunController.ammotype ammoType;
 
 
     /// <summary>
     /// We store the number of shots we currently have remaining
     /// </summary>
-    public int shotsRemain
-    {
-        get; set;
-    }
+    public int shotsRemain;
 
     /// <summary>
-    /// We store what the shooting rate is, should the fire be held down
+    /// We have how often the shots can be fired from the gun
     /// </summary>
-    public float shootRate
-    {
-        get; set;
-    }
+    public float shootRate;
 
     /// <summary>
-    /// We have the modifier for how fast our shots will be fired
+    /// We have the modifier for how fast our shots will be fired out of the gun
     /// </summary>
-    public float shootSpeed
-    {
-        get; set;
-    }
+    public float shootSpeed;
 
     /// <summary>
     /// We see if we are firing on endless mode,
     /// </summary>
-    public bool freeFire
-    {
-        get; set;
-    }
+    public bool freeFire;
 
     /// <summary>
     /// This empty is the location we want to spawn shots from 
     /// </summary>
-    public Transform shootLoc
-    {
-        get; set;
-    }
+    public Transform shootLoc;
 
     // Use this for initialization
     void Start() {
@@ -79,7 +58,7 @@ public class ProjectileGun : MonoBehaviour {
     /// <param name="shootRate">The shooting rate of the gun</param>
     /// <param name="shootSpeed">The speed the projectiles are shot</param>
     /// <param name="freeFire">Whether or not the gun starts in freeFire mode</param>
-    public void Initialize(int gunType, int ammoType, int shotsRemain, float shootRate, float shootSpeed, bool freeFire)
+    public void Initialize(GunController.guntype gunType, GunController.ammotype ammoType, int shotsRemain, float shootRate, float shootSpeed, bool freeFire, )
     {   
         this.gunType = gunType;
         this.ammoType = ammoType;
@@ -103,10 +82,17 @@ public class ProjectileGun : MonoBehaviour {
 
         if (ammoType == (int)GunController.ammotype.norshots)
         {
-            pref = Resources.Load<GameObject>("Ammo/Normal Shot");
+            pref = Resources.Load<GameObject>("Prefabs/Ammo/Normal Shot");
+        }
+        else
+        {
+            pref = null;
         }
 
-        //GameObject projectile = Instantiate(pref, shootLoc.position, shootLoc.rotation) as GameObject;
+        GameObject projectile = Instantiate(pref, shootLoc.position, shootLoc.rotation) as GameObject;
+
+        //now we want to fire the gun
+        projectile.GetComponent<Projectile>().Fire(shootSpeed);
     }
 
 	// Update is called once per frame
