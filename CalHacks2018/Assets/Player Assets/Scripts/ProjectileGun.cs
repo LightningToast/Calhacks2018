@@ -106,7 +106,7 @@ public class ProjectileGun : MonoBehaviour {
             pref = Resources.Load<GameObject>("Ammo/Normal Shot");
         }
 
-        //GameObject projectile = Instantiate(pref, shootLoc.position, shootLoc.rotation) as GameObject;
+        // GameObject projectile = Instantiate(pref, shootLoc.position, shootLoc.rotation) as GameObject;
     }
 
 	// Update is called once per frame
