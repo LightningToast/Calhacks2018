@@ -7,11 +7,10 @@ using UnityEngine;
 
 public class FirebaseManager : MonoBehaviour
 {
-    DatabaseReference reference;
     public bool firebaseEnabled = true;
 
-    public float posX;
-    public float posY;
+    public float turn;
+    public float speed;
     // Use this for initialization
     void Start()
     {
@@ -19,14 +18,10 @@ public class FirebaseManager : MonoBehaviour
         {
             return;
         }
-        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://redseptember-5c74c.firebaseio.com/");
-        reference = FirebaseDatabase.DefaultInstance.RootReference;
+        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://hornedtomato.firebaseio.com/");
 
-        //reference.Child("Missions/Mission1/Ship").Child("PosX").SetValueAsync(0);
-        //reference.Child("Missions/Mission1/Ship").Child("PosY").SetValueAsync(0);
-
-        FirebaseDatabase.DefaultInstance.GetReference("Missions/Mission1/Ship/PosX").ValueChanged += HandleValueChangedShipPosX;
-        FirebaseDatabase.DefaultInstance.GetReference("Missions/Mission1/Ship/PosY").ValueChanged += HandleValueChangedShipPosY;
+        FirebaseDatabase.DefaultInstance.GetReference("turn").ValueChanged += HandleValueChangedTurn;
+        FirebaseDatabase.DefaultInstance.GetReference("speed").ValueChanged += HandleValueChangedSpeed;
 
     }
 
@@ -41,30 +36,15 @@ public class FirebaseManager : MonoBehaviour
 
     }
 
-    void HandleValueChangedShipPosX(object sender, ValueChangedEventArgs args)
+    void HandleValueChangedTurn(object sender, ValueChangedEventArgs args)
     {
-        posX = float.Parse(args.Snapshot.Value.ToString());
+        turn = float.Parse(args.Snapshot.Value.ToString());
+        print("Turn " + turn);
     }
-    void HandleValueChangedShipPosY(object sender, ValueChangedEventArgs args)
+    void HandleValueChangedSpeed(object sender, ValueChangedEventArgs args)
     {
-        posY = float.Parse(args.Snapshot.Value.ToString());
-    }
-
-    public void SendShipPosX(float val)
-    {
-        if (!firebaseEnabled)
-        {
-            return;
-        }
-        //reference.Child("Missions/Mission1/Ship/").Child("PosX").SetValueAsync(val);
-    }
-    public void SendShipPosY(float val)
-    {
-        if (!firebaseEnabled)
-        {
-            return;
-        }
-        //reference.Child("Missions/Mission1/Ship/").Child("PosY").SetValueAsync(val);
+        speed = float.Parse(args.Snapshot.Value.ToString());
+        print("Speed " + speed);
     }
 }
 
