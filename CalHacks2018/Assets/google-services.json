@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "554092248457",
+    "firebase_url": "https://hornedtomato.firebaseio.com",
+    "project_id": "hornedtomato",
+    "storage_bucket": "hornedtomato.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554092248457:android:5aa13ffca15aaab6",
+        "android_client_info": {
+          "package_name": "com.JustinPark.HornedTomato"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554092248457-vg1d4f0jquul1pecru44vjautdu24fsv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxP945KB83pnjwbeVBEGjq5-mztQrDOxw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
