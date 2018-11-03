@@ -5,6 +5,8 @@ using UnityEngine;
 public class GunController : MonoBehaviour {
 
 
+    public enum gunstatus { Active, Reloading };
+
     /// <summary>
     /// We have an enum that contains all of the gun types we will use
     /// </summary>
