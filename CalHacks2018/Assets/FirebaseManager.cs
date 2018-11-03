@@ -4,17 +4,16 @@ using Firebase;
 using Firebase.Database;
 using Firebase.Unity.Editor;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class FirebaseManager : MonoBehaviour
+public class FirebaseManager : NetworkBehaviour
 {
-    public bool firebaseEnabled = true;
-
     public float turn;
     public float speed;
     // Use this for initialization
     void Start()
     {
-        if (!firebaseEnabled)
+        if (!isServer)
         {
             return;
         }

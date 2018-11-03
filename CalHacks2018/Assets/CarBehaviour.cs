@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class CarBehaviour : MonoBehaviour {
+public class CarBehaviour : NetworkBehaviour {
     public float turn;
     public float maxTurn = 20f;
 
@@ -18,13 +19,21 @@ public class CarBehaviour : MonoBehaviour {
     Rigidbody rb;
 	// Use this for initialization
 	void Start () {
+        if(!isServer) {
+            return;
+        }
         manager = GetComponent<FirebaseManager>();
         rb = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if(Mathf.Abs(turn - manager.turn) > approxCheck) {
+        if (!isServer)
+        {
+            return;
+        }
+
+        if (Mathf.Abs(turn - manager.turn) > approxCheck) {
             turn = Mathf.Lerp(turn, manager.turn, turnRamp);
         }
         if(Mathf.Abs(speed - manager.speed) > approxCheck)
