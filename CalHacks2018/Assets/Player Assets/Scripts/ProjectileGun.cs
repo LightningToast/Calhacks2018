@@ -13,11 +13,11 @@ public class ProjectileGun : MonoBehaviour {
     /// </summary>
     public GunController.guntype gunType;
 
+
     /// <summary>
     /// We store the type of ammo we are currently using
     /// </summary>
     public GunController.ammotype ammoType;
-
 
     /// <summary>
     /// We store the number of shots we currently have remaining
@@ -44,11 +44,19 @@ public class ProjectileGun : MonoBehaviour {
     /// </summary>
     public Transform shootLoc;
 
-    // Use this for initialization
+    /// <summary>
+    /// We want to do some housekeeping stuff here
+    /// </summary>
     void Start() {
-            
+        //If a shootLoc isn't specified, lets just get it from the child
+        if (shootLoc == null)
+        {
+            this.shootLoc = transform.Find("Shot Spawn");
+        }
     }
 
+    //for now we just want to stick with the get and set
+    /*
     /// <summary>
     /// This function is used for setting up the gun
     /// </summary>
@@ -67,16 +75,17 @@ public class ProjectileGun : MonoBehaviour {
         this.shootSpeed = shootSpeed;
         this.freeFire = freeFire;
 
-        //Now we initialize the location where our amo spawns
-        this.shootLoc = transform.Find("Shot Spawn");
-
     }
-
+    */
     /// <summary>
     /// We instantiate a shot at the required location of the gun, given by the offset
     /// </summary>
     public void SpawnShot()
     {
+        //We want to check how much ammo we have and whether we are in freefire mode
+
+
+            
         //We want to initialize the shot at the shootLoc, so first we get the prefab
         GameObject pref;
 
