@@ -8,6 +8,12 @@ using UnityEngine;
 /// </summary>
 public class ProjectileGun : MonoBehaviour {
 
+
+    /// <summary>
+    /// Here we have the status of the gun in question
+    /// </summary>
+    public GunController.gunstatus gunStatus;
+
     /// <summary>
     /// We store what type of gun we currently have
     /// </summary>
@@ -20,6 +26,11 @@ public class ProjectileGun : MonoBehaviour {
     public GunController.ammotype ammoType;
 
     /// <summary>
+    /// We 
+    /// </summary>
+    public int clipSize;
+
+    /// <summary>
     /// We store the number of shots we currently have remaining
     /// </summary>
     public int shotsRemain;
@@ -28,6 +39,16 @@ public class ProjectileGun : MonoBehaviour {
     /// We have how often the shots can be fired from the gun
     /// </summary>
     public float shootRate;
+
+    /// <summary>
+    /// We have how long it will take to reload the gun
+    /// </summary>
+    public float reloadTime;
+
+    /// <summary>
+    /// We have how much longer it will take to reload the gun, if we need to
+    /// </summary>
+    public float reloadRemain;
 
     /// <summary>
     /// We have the modifier for how fast our shots will be fired out of the gun
@@ -53,6 +74,8 @@ public class ProjectileGun : MonoBehaviour {
         {
             this.shootLoc = transform.Find("Shot Spawn");
         }
+        shotsRemain = clipSize;
+        reloadRemain = reloadTime;
     }
 
     //for now we just want to stick with the get and set
@@ -83,7 +106,28 @@ public class ProjectileGun : MonoBehaviour {
     public void SpawnShot()
     {
         //We want to check how much ammo we have and whether we are in freefire mode
+        if(freeFire == true)
+        {
+            //if it's free fire we don't need to do anything
+        }
+        else if(gunStatus == GunController.gunstatus.Active && shotsRemain > 0)
+        {
+            //We want to decriment the shot counter and fire
+            shotsRemain -= 1;
+        }
+        else if(gunStatus == GunController.gunstatus.Reloading)
+        {
+            //We just want to wait and do nothing, we can do something in the future
+            return;
+        }
+        else if (shotsRemain == 0 && gunStatus == GunController.gunstatus.Active)
+        {
+            //we want to set the status to reloading, and set the time
+            gunStatus = GunController.gunstatus.Reloading;
+            return;
+        }
 
+        
 
             
         //We want to initialize the shot at the shootLoc, so first we get the prefab
@@ -102,10 +146,25 @@ public class ProjectileGun : MonoBehaviour {
 
         //now we want to fire the gun
         projectile.GetComponent<Projectile>().Fire(shootSpeed);
+
     }
 
 	// Update is called once per frame
 	void Update () {
-		
+		//if we are reloading, we want to be sure to decriment that time, and set active when complete
+        if (gunStatus == GunController.gunstatus.Reloading)
+        {
+            
+            reloadRemain -= Time.deltaTime;
+
+            //if the time is complete, we set it to be active and set the clip 
+            if (reloadRemain <= 0)
+            {
+                gunStatus = GunController.gunstatus.Active;
+                shotsRemain = clipSize;
+                reloadRemain = reloadTime;
+            }
+            
+        }
 	}
 }
