@@ -57,7 +57,6 @@ public class Projectile : MonoBehaviour {
     public void Fire(float gunSpeedMod)
     {
         Vector3 normAng = transform.rotation * Vector3.forward;
-        Debug.Log(normAng);
         GetComponent<Rigidbody>().velocity = ( normAng * gunSpeedMod * baseSpeed);
     }
 
