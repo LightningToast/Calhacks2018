@@ -44,6 +44,8 @@ public class ProjectileGun : MonoBehaviour {
     /// </summary>
     public Transform shootLoc;
 
+    public GameObject projectile_prefab;
+
     /// <summary>
     /// We want to do some housekeeping stuff here
     /// </summary>
@@ -84,21 +86,21 @@ public class ProjectileGun : MonoBehaviour {
     {
         //We want to check how much ammo we have and whether we are in freefire mode
 
-
+        Debug.Log("Spawnshot");
             
         //We want to initialize the shot at the shootLoc, so first we get the prefab
-        GameObject pref;
+        //GameObject pref;
 
-        if (ammoType == (int)GunController.ammotype.norshots)
+        /*if (ammoType == (int)GunController.ammotype.norshots)
         {
             pref = Resources.Load<GameObject>("Prefabs/Ammo/Normal Shot");
         }
         else
         {
             pref = null;
-        }
+        }*/
 
-        GameObject projectile = Instantiate(pref, shootLoc.position, shootLoc.rotation) as GameObject;
+        GameObject projectile = (GameObject) Instantiate(projectile_prefab, shootLoc.position, shootLoc.rotation);
 
         //now we want to fire the gun
         projectile.GetComponent<Projectile>().Fire(shootSpeed);

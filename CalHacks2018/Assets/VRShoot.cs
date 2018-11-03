@@ -43,6 +43,7 @@ public class VRShoot : MonoBehaviour
 
     public void Shoot()
     {
-        Instantiate(Projectile_Prefab, transform.position, transform.rotation);
+        //Instantiate(Projectile_Prefab, transform.position, transform.rotation);
+        this.GetComponent<ProjectileGun>().SpawnShot();
     }
 }
