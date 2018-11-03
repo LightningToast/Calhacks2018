@@ -100,8 +100,12 @@ public class ProjectileGun : MonoBehaviour {
 
         GameObject projectile = Instantiate(pref, shootLoc.position, shootLoc.rotation) as GameObject;
 
+<<<<<<< HEAD
         //now we want to fire the gun
         projectile.GetComponent<Projectile>().Fire(shootSpeed);
+=======
+        // GameObject projectile = Instantiate(pref, shootLoc.position, shootLoc.rotation) as GameObject;
+>>>>>>> 8ed75cb9292a3529ca42c9559d9857207984bccd
     }
 
 	// Update is called once per frame
