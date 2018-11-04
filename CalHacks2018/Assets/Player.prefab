@@ -51,7 +51,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1580408670606962}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -98,13 +98,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f617f6ddb1f4476adde14bc05c89b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carPrefab: {fileID: 1793853705129604, guid: bd28f88910b5044d9aaf9199a57d677c, type: 2}
+  carPrefab: {fileID: 1553232072814206, guid: cf7c8c0f93ca4664c9accf1fc0ac5c5f, type: 2}
   headsetPrefab: {fileID: 1110074960978588, guid: f84143f9a958645bda5372a3643f50e9,
     type: 2}
   headset: {fileID: 0}
   handPrefab: {fileID: 1095668070990200, guid: 335f6354f04b34bc68d49c0a11ef5948, type: 2}
   leftHand: {fileID: 0}
   rightHand: {fileID: 0}
+  vrController: {fileID: 0}
+  vrHead: {fileID: 0}
+  vrLHand: {fileID: 0}
+  vrRHand: {fileID: 0}
+  score: 0
 --- !u!114 &114699951579361144
 MonoBehaviour:
   m_ObjectHideFlags: 1

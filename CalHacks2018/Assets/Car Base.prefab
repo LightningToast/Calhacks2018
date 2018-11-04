@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4054502796439306}
   - component: {fileID: 33027607516868826}
   - component: {fileID: 23334505041616268}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Encasing_Torus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4684439236250520}
   - component: {fileID: 33983414036509718}
   - component: {fileID: 23729467168080132}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Car_Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 65398524631773810}
   - component: {fileID: 114784201989269560}
   - component: {fileID: 114238759688734598}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Car Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4477094939942758}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall_Spawn_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4439595322199958}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall_Spawn_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 4276407045981194}
   - component: {fileID: 33271889551758528}
   - component: {fileID: 23412713611467042}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Car_Dashboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4175749916966716}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Car Compiled
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 4063716645341210}
   - component: {fileID: 33835458116615656}
   - component: {fileID: 23748341669748572}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Car_Seat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,8 +179,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1919386353964342}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0.25657}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 4684439236250520}
   - {fileID: 4276407045981194}
@@ -235,7 +235,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1553232072814206}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2}
+  m_LocalPosition: {x: 2.2044625, y: 3.6515608, z: -5.370071}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4439595322199958}
@@ -502,13 +502,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e16be4f59b9af49bb6d06e6d11f1be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wall_prefab: {fileID: 100000, guid: e3945cff24a69f84283a2d4aaee90c00, type: 3}
+  hot_air_balloon: {fileID: 1080369157752390, guid: 240d5ac4ef0cbd04882abecf905e7c71,
+    type: 2}
+  small_balloon: {fileID: 1280338810137562, guid: 2d2bd12a9ad3e2241937689f6b221601,
+    type: 2}
   wall_spawn_left: {fileID: 1722133152589210}
   wall_spawn_right: {fileID: 1643939049085504}
-  y_off: 4
-  corridor_width: 10
+  y_off: 6
+  corridor_width: 30
   spawn_dist: 40
-  spawn_freq: 80
+  spawn_freq: 60
 --- !u!114 &114784201989269560
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -25,7 +25,7 @@ public class NetworkPlayerBehaviour : NetworkBehaviour {
     // Use this for initialization
     void Start () {
         if(isServer) {
-            if (!GameObject.Find("Car(Clone)"))
+            if (!GameObject.Find("Car Base(Clone)"))
             {
                 GameObject car = (GameObject)Instantiate(carPrefab, Vector3.zero, Quaternion.identity);
                 NetworkServer.Spawn(car);
@@ -33,7 +33,7 @@ public class NetworkPlayerBehaviour : NetworkBehaviour {
         }
         if (isLocalPlayer)
         {
-            transform.parent = GameObject.Find("Car(Clone)").transform;
+            transform.parent = GameObject.Find("Car Base(Clone)").transform;
             transform.localPosition = Vector3.zero;
             CmdSpawnBody();
 
@@ -48,7 +48,7 @@ public class NetworkPlayerBehaviour : NetworkBehaviour {
                 vrLHand = vrController.transform.Find("SteamVRObjects/LeftHand").gameObject;
                 vrRHand = vrController.transform.Find("SteamVRObjects/RightHand").gameObject;
 
-                vrController.transform.parent = GameObject.Find("Car(Clone)").transform;
+                vrController.transform.parent = GameObject.Find("Car Base(Clone)").transform;
                 vrController.transform.localPosition = Vector3.zero;
             }
         }

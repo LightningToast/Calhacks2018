@@ -35,7 +35,8 @@ public class WallGen : MonoBehaviour {
         {
             if (Random.Range(0f, 1f) > .9f)
             {
-                GameObject temp = Instantiate((Random.Range(0,2) == 0) ? hot_air_balloon : small_balloon, wall_spawn_left.transform.position + new Vector3(Random.Range(-6, 6), y_off + Random.Range(-3, 3), 0), transform.rotation);
+                int rand1 = Random.Range(0, 9);
+                GameObject temp = Instantiate((rand1 == 0) ? hot_air_balloon : small_balloon, wall_spawn_left.transform.position + new Vector3(Random.Range(-6, 6), y_off + Random.Range(-3, 3), 0), Quaternion.Euler((rand1 == 0) ? 0 : -90, 0, 0));
                 Destroy(temp, 5);
                 counter_l = 0;
             }
@@ -47,7 +48,8 @@ public class WallGen : MonoBehaviour {
         {
             if (Random.Range(0f, 1f) > .9f)
             {
-                GameObject temp2 = Instantiate((Random.Range(0, 2) == 0) ? hot_air_balloon : small_balloon, wall_spawn_right.transform.position + new Vector3(Random.Range(-6, 6), y_off + Random.Range(-3, 3), 0), transform.rotation);
+                int rand2 = Random.Range(0, 9);
+                GameObject temp2 = Instantiate((rand2 == 0) ? hot_air_balloon : small_balloon, wall_spawn_right.transform.position + new Vector3(Random.Range(-6, 6), y_off + Random.Range(-3, 3), 0), Quaternion.Euler((rand2 == 0) ? 0 : -90, 0, 0));
                 Destroy(temp2, 10);
                 counter_r = 0;
             }
