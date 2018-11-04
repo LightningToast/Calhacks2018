@@ -653,7 +653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turn: 0
-  maxTurn: 1
+  maxTurn: 50
   speed: 0
   approxCheck: 0.01
   turnRamp: 0.05

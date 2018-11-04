@@ -43,6 +43,9 @@ public class TargetBehaviour : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
+        if(collision.collider.gameObject.tag != "Projectile") {
+            return;
+        }
         if((spinning)||retracting) {
             return;
         }
