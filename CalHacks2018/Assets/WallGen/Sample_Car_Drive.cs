@@ -7,6 +7,7 @@ public class Sample_Car_Drive : MonoBehaviour {
     int turn_counter = 0;
     public int turn_interval = 800;
     public int turn_degree = 30;
+    public int speed = 10;
     float inc = 0;
     float tot_rot = 0;
 
@@ -22,7 +23,7 @@ public class Sample_Car_Drive : MonoBehaviour {
             tot_rot += inc;
         }
 
-        this.GetComponent<Rigidbody>().velocity = transform.forward * 10;
+        this.GetComponent<Rigidbody>().velocity = transform.forward * speed;
 
         if (turn_counter == turn_interval)
         {

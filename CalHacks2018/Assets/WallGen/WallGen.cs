@@ -8,36 +8,57 @@ public class WallGen : MonoBehaviour {
     public GameObject wall_spawn_left;
     public GameObject wall_spawn_right;
 
+    public int y_off = 10;
+
     public int corridor_width = 20;
     public int spawn_dist = 40;
 
     public int spawn_freq = 5;
-    int counter = 0;
+    int counter_l;
+    int counter_r;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         spawn_freq = Mathf.Max(5, spawn_freq);
         corridor_width = Mathf.Max(6, corridor_width);
         spawn_dist = Mathf.Max(10, spawn_dist);
         wall_spawn_left.transform.localPosition = new Vector3(-1 * (corridor_width / 2), 0, spawn_dist);
         wall_spawn_right.transform.localPosition = new Vector3(corridor_width / 2, 0, spawn_dist);
+        counter_l = Random.Range(0, spawn_freq);
+        counter_r = Random.Range(0, spawn_freq);
     }
-	
-	// Update is called once per frame
-	void Update () {
-        counter++;
 
-        if (counter == spawn_freq) {
-            counter = 0;
-            Instantiate(wall_prefab, wall_spawn_left.transform.position, transform.rotation);
-            Instantiate(wall_prefab, wall_spawn_right.transform.position, transform.rotation);
+    // Update is called once per frame
+    void Update() {
+        if (counter_l >= spawn_freq)
+        {
+            if (Random.Range(0f, 1f) > .9f)
+            {
+                GameObject temp = Instantiate(wall_prefab, wall_spawn_left.transform.position + new Vector3(Random.Range(-4, 4), y_off + Random.Range(-3, 3), 0), transform.rotation);
+                Destroy(temp, 5);
+                counter_l = 0;
+            }
         }
-	}
-    
-    private void OnTriggerEnter(Collider other)
+
+        counter_l++;
+
+        if (counter_r >= spawn_freq)
+        {
+            if (Random.Range(0f, 1f) > .9f)
+            {
+                GameObject temp2 = Instantiate(wall_prefab, wall_spawn_right.transform.position + new Vector3(Random.Range(-4, 4), y_off + Random.Range(-3, 3), 0), transform.rotation);
+                Destroy(temp2, 10);
+                counter_r = 0;
+            }
+        }
+
+        counter_r++;
+    }
+
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Wall") {
             Destroy(other.gameObject);
         }
-    }
+    }*/
 }
