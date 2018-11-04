@@ -4823,6 +4823,12 @@ Prefab:
       propertyPath: otherHand
       value: 
       objectReference: {fileID: 1786188251}
+    - target: {fileID: 114690261405945988, guid: 8d813356b38d3c84bb5d89516e0fd994,
+        type: 2}
+      propertyPath: projectilePref
+      value: 
+      objectReference: {fileID: 1770315574012648, guid: dd8c22329c14746e78b16c05ba302040,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d813356b38d3c84bb5d89516e0fd994, type: 2}
   m_IsPrefabParent: 0
