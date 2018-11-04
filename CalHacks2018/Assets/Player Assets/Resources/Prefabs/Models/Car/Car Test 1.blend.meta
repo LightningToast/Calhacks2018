@@ -3,6 +3,45 @@ guid: 63e488c03dfe7c7409639bb088000237
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: Car_Back
+    100004: Car_Dashboard
+    100006: Car_Seat
+    100008: Car_Window
+    100010: Encasing_Torus
+    400000: //RootNode
+    400002: Car_Back
+    400004: Car_Dashboard
+    400006: Car_Seat
+    400008: Car_Window
+    400010: Encasing_Torus
+    2100000: Black_Back
+    2100002: Cyllindar_
+    2100004: Metal_Top
+    2100006: Glass
+    2100008: Image
+    2100010: Glass_001
+    2100012: Red_Metal
+    2100014: Steel
+    2100016: Seat
+    2100018: Bottom_and_Door
+    2300000: Car_Back
+    2300002: Car_Dashboard
+    2300004: Car_Seat
+    2300006: Car_Window
+    2300008: Encasing_Torus
+    3300000: Car_Back
+    3300002: Car_Dashboard
+    3300004: Car_Seat
+    3300006: Car_Window
+    3300008: Encasing_Torus
+    4300000: Car_Back
+    4300002: Encasing_Torus
+    4300004: Car_Window
+    4300006: Car_Dashboard
+    4300008: Car_Seat
+    7400000: Default Take
+    9500000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -56,7 +95,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
