@@ -53,6 +53,7 @@ public class Hexagon_Gen : MonoBehaviour
                 done.Add(coord);
                 GameObject prefab = Rand_Pillar();
                 GameObject hex = Instantiate(prefab, new Vector3(pos.x, Random.Range(-.5f, .5f) + hex_offset, pos.y), Quaternion.Euler(-90, 0, 0));
+                StartCoroutine(Rise(hex));
                 Destroy(hex, 5);
             }
             else if (Vector3.Distance(pos, b.center) > 10)
@@ -128,6 +129,15 @@ public class Hexagon_Gen : MonoBehaviour
                 return hex_prefab4;
             default:
                 return hex_prefab1;
+        }
+    }
+
+    IEnumerator Rise (GameObject pillar) {
+        int ticks = Random.Range(10, 30);
+        for (int x = 0; x < ticks; x++)
+        {
+            pillar.transform.position = new Vector3(pillar.transform.position.x, pillar.transform.position.y - ticks + x, pillar.transform.z);
+            yield return null;
         }
     }
    
