@@ -20,6 +20,8 @@ public class NetworkPlayerBehaviour : NetworkBehaviour {
 
     [SyncVar]
     public int score = 0;
+
+    public bool oculusGo = false;
     // Use this for initialization
     void Start () {
         if(isServer) {
@@ -35,13 +37,20 @@ public class NetworkPlayerBehaviour : NetworkBehaviour {
             transform.localPosition = Vector3.zero;
             CmdSpawnBody();
 
-            vrController = GameObject.Find("VRPlayer");
-            vrHead = vrController.transform.Find("SteamVRObjects/VRCamera").gameObject;
-            vrLHand = vrController.transform.Find("SteamVRObjects/LeftHand").gameObject;
-            vrRHand = vrController.transform.Find("SteamVRObjects/RightHand").gameObject;
+            if (oculusGo)
+            {
 
-            vrController.transform.parent = GameObject.Find("Car(Clone)").transform;
-            vrController.transform.localPosition = Vector3.zero;
+            }
+            else
+            {
+                vrController = GameObject.Find("VRPlayer");
+                vrHead = vrController.transform.Find("SteamVRObjects/VRCamera").gameObject;
+                vrLHand = vrController.transform.Find("SteamVRObjects/LeftHand").gameObject;
+                vrRHand = vrController.transform.Find("SteamVRObjects/RightHand").gameObject;
+
+                vrController.transform.parent = GameObject.Find("Car(Clone)").transform;
+                vrController.transform.localPosition = Vector3.zero;
+            }
         }
     }
 	
