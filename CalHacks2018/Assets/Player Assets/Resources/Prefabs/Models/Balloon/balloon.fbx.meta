@@ -1,49 +1,52 @@
 fileFormatVersion: 2
-guid: 63e488c03dfe7c7409639bb088000237
+guid: 78ecd16db02ed9740acff534ff193616
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Car_Back
-    100004: Car_Dashboard
-    100006: Car_Seat
-    100008: Car_Window
-    100010: Encasing_Torus
+    100002: Cube
+    100004: Empty
+    100006: Sphere
+    100008: Sphere.001
     400000: //RootNode
-    400002: Car_Back
-    400004: Car_Dashboard
-    400006: Car_Seat
-    400008: Car_Window
-    400010: Encasing_Torus
-    2100000: Black_Back
-    2100002: Cyllindar_
-    2100004: Metal_Top
-    2100006: Glass
-    2100008: Image
-    2100010: Glass_001
-    2100012: Red_Metal
-    2100014: Steel
-    2100016: Seat
-    2100018: Bottom_and_Door
-    2300000: Car_Back
-    2300002: Car_Dashboard
-    2300004: Car_Seat
-    2300006: Car_Window
-    2300008: Encasing_Torus
-    3300000: Car_Back
-    3300002: Car_Dashboard
-    3300004: Car_Seat
-    3300006: Car_Window
-    3300008: Encasing_Torus
-    4300000: Car_Back
-    4300002: Encasing_Torus
-    4300004: Car_Window
-    4300006: Car_Dashboard
-    4300008: Car_Seat
-    7400000: Default Take
-    9500000: //RootNode
-    2186277476908879412: ImportLogs
-  externalObjects: {}
+    400002: Cube
+    400004: Empty
+    400006: Sphere
+    400008: Sphere.001
+    2100000: Box Brown
+    2100002: Brown
+    2100004: Red
+    2100006: White
+    2300000: Cube
+    2300002: Sphere
+    2300004: Sphere.001
+    3300000: Cube
+    3300002: Sphere
+    3300004: Sphere.001
+    4300000: Cube
+    4300002: Sphere.001
+    4300004: Sphere
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box Brown
+    second: {fileID: 2100000, guid: c0b8050f69d84a44a97500d842529e8c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown
+    second: {fileID: 2100000, guid: c3fb99fd0df6d9b45810c0924b5c6a6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red
+    second: {fileID: 2100000, guid: ace0c375c55bcaa48908ceb923e16a34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: 5b1ca7ca3c3b8474e81f23683a11e44f, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -95,7 +98,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -119,7 +122,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
