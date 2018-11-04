@@ -134,7 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83b2bbef6f70184a93cde2fedb9e4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pref: {fileID: 1639517240346392, guid: c09737450da62804489d601243434a12, type: 2}
+  projectilePref: {fileID: 1639517240346392, guid: c09737450da62804489d601243434a12,
+    type: 2}
   shootLoc: {fileID: 959607142}
 --- !u!1 &370296679
 GameObject:
@@ -326,28 +327,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 22.752, y: -6.708, z: 1.5300001}
---- !u!1 &959607141 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1710628783361156, guid: 8ab51a1f6b5f0d24bb1e56566978f8d5,
-    type: 2}
-  m_PrefabInternal: {fileID: 997538331}
 --- !u!4 &959607142 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4374501197346918, guid: 8ab51a1f6b5f0d24bb1e56566978f8d5,
     type: 2}
   m_PrefabInternal: {fileID: 997538331}
---- !u!114 &959607145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 959607141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1e6cc1c41cd024f98fd927ad29314b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseSpeed: 100
 --- !u!1001 &997538331
 Prefab:
   m_ObjectHideFlags: 0
