@@ -60,6 +60,8 @@ GameObject:
   - component: {fileID: 65398524631773810}
   - component: {fileID: 114784201989269560}
   - component: {fileID: 114238759688734598}
+  - component: {fileID: 114449323711544882}
+  - component: {fileID: 114471242582069926}
   m_Layer: 10
   m_Name: Car Base
   m_TagString: Untagged
@@ -483,7 +485,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1553232072814206}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85a60ec3a3eceb04283df9ccf8209b9a, type: 3}
   m_Name: 
@@ -512,6 +514,37 @@ MonoBehaviour:
   corridor_width: 30
   spawn_dist: 40
   spawn_freq: 60
+--- !u!114 &114449323711544882
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1553232072814206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8a9f4415b954f8f95391f9e553b773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turn: 0
+  speed: 0
+--- !u!114 &114471242582069926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1553232072814206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aac76f97ddedd4fbd900fe10d540c18d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turn: 0
+  maxTurn: 20
+  speed: 0
+  approxCheck: 0.01
+  turnRamp: 0.05
+  speedRamp: 0.05
+  manager: {fileID: 0}
 --- !u!114 &114784201989269560
 MonoBehaviour:
   m_ObjectHideFlags: 1
