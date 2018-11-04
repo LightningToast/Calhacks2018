@@ -10,9 +10,6 @@ public class VRShoot : MonoBehaviour
 
     public Hand hand;
 
-    public GameObject Projectile_Prefab;
-
-
     private void OnEnable()
     {
         if (hand == null)
@@ -37,12 +34,7 @@ public class VRShoot : MonoBehaviour
     {
         if (shootAction.GetStateDown(hand.handType))
         {
-            Shoot();
+            this.GetComponent<SimpleGun>().SpawnShot();
         }
-    }
-
-    public void Shoot()
-    {
-        Instantiate(Projectile_Prefab, transform.position, transform.rotation);
     }
 }
