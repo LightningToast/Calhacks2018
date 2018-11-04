@@ -146,53 +146,6 @@ Transform:
   m_Father: {fileID: 1780554019}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &284076684
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4983935219014604, guid: ea15b4b75776c4ba2b6464de8b8b706c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4983935219014604, guid: ea15b4b75776c4ba2b6464de8b8b706c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4983935219014604, guid: ea15b4b75776c4ba2b6464de8b8b706c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4983935219014604, guid: ea15b4b75776c4ba2b6464de8b8b706c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4983935219014604, guid: ea15b4b75776c4ba2b6464de8b8b706c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4983935219014604, guid: ea15b4b75776c4ba2b6464de8b8b706c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4983935219014604, guid: ea15b4b75776c4ba2b6464de8b8b706c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4983935219014604, guid: ea15b4b75776c4ba2b6464de8b8b706c, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ea15b4b75776c4ba2b6464de8b8b706c, type: 2}
-  m_IsPrefabAsset: 0
---- !u!1 &945624709 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1196993002557970, guid: ea15b4b75776c4ba2b6464de8b8b706c,
-    type: 2}
-  m_PrefabInternal: {fileID: 284076684}
 --- !u!1 &1075683520
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,8 +416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85a60ec3a3eceb04283df9ccf8209b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turn_interval: 800
-  turn_degree: 30
+  turn_interval: 2000
+  turn_degree: 0
 --- !u!54 &1780554018
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -507,8 +460,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1f4f61fd80cc4250b525ec3fdefd745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hex_prefab: {fileID: 945624709}
-  hex_height: 0.5
+  hex_prefab: {fileID: 100000, guid: acc3b84d277bc1c47ae06694388f0657, type: 3}
+  hex_offset: -7
+  hex_height: 0.8
 --- !u!65 &1780554021
 BoxCollider:
   m_ObjectHideFlags: 0
