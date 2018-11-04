@@ -460,7 +460,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &258840649
 GameObject:
@@ -760,11 +760,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 582179213}
   m_Enabled: 1
---- !u!4 &587688858 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: 1d6ea686cbb3b734580c125dc85d09c7,
-    type: 3}
-  m_PrefabInternal: {fileID: 1534472573}
 --- !u!1 &763603859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,6 +1007,8 @@ GameObject:
   - component: {fileID: 800741933}
   - component: {fileID: 800741937}
   - component: {fileID: 800741938}
+  - component: {fileID: 800741940}
+  - component: {fileID: 800741939}
   m_Layer: 0
   m_Name: Car Base
   m_TagString: Untagged
@@ -1083,7 +1080,7 @@ Transform:
   - {fileID: 1258654481}
   - {fileID: 1294724223}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &800741937
 Rigidbody:
@@ -1112,6 +1109,59 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12, y: 6, z: 17}
   m_Center: {x: 0, y: 0, z: 8}
+--- !u!114 &800741939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 800741932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.033333335
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &800741940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 800741932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!1 &846467901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1884,17 +1934,17 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1742123135}
-  m_LocalRotation: {x: 0.50000006, y: -0.49999994, z: -0.50000006, w: 0.49999994}
-  m_LocalPosition: {x: -0.0031900026, y: 0, z: 0.011339999}
-  m_LocalScale: {x: 0.010000003, y: 0.009999999, z: 0.0100000035}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.1339997, z: -1.6809998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 466883679}
   - {fileID: 221113138}
   - {fileID: 1634925183}
   - {fileID: 1378518653}
   - {fileID: 59402121}
-  m_Father: {fileID: 587688858}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
 --- !u!114 &1742123137
 MonoBehaviour:
