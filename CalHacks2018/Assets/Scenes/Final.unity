@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.1802837, g: 0.22571404, b: 0.30692273, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1045,7 +1045,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e16be4f59b9af49bb6d06e6d11f1be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wall_prefab: {fileID: 100000, guid: e3945cff24a69f84283a2d4aaee90c00, type: 3}
+  hot_air_balloon: {fileID: 1080369157752390, guid: 240d5ac4ef0cbd04882abecf905e7c71,
+    type: 2}
+  small_balloon: {fileID: 1280338810137562, guid: 2d2bd12a9ad3e2241937689f6b221601,
+    type: 2}
   wall_spawn_left: {fileID: 1900700465}
   wall_spawn_right: {fileID: 1258654480}
   y_off: 4

@@ -136,7 +136,7 @@ public class Hexagon_Gen : MonoBehaviour
         int ticks = Random.Range(10, 30);
         for (int x = 0; x < ticks; x++)
         {
-            pillar.transform.position = new Vector3(pillar.transform.position.x, pillar.transform.position.y - ticks + x, pillar.transform.z);
+            pillar.transform.position = new Vector3(pillar.transform.position.x, pillar.transform.position.y - ticks + x, pillar.transform.position.z);
             yield return null;
         }
     }
