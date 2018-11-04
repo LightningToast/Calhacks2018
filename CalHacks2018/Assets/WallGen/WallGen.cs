@@ -18,6 +18,6 @@ public class WallGen : MonoBehaviour {
 	void Update () {
         counter++;
 
-        if (counter == spawn_freq)
+        //if (counter == spawn_freq)
 	}
 }
