@@ -12,8 +12,11 @@ public class NetworkPlayerBehaviour : NetworkBehaviour {
     public GameObject handPrefab;
     public GameObject leftHand;
     public GameObject rightHand;
-	// Use this for initialization
-	void Start () {
+
+    [SyncVar]
+    public int score = 0;
+    // Use this for initialization
+    void Start () {
         if(isServer) {
             if (!GameObject.Find("Car(Clone)"))
             {
