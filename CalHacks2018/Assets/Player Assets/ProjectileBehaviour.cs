@@ -10,7 +10,7 @@ public class ProjectileBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(transform.forward * 50f);
+        //rb.AddForce(transform.forward * 50f);
 	}
 	
 	// Update is called once per frame

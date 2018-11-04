@@ -13,6 +13,11 @@ public class NetworkPlayerBehaviour : NetworkBehaviour {
     public GameObject leftHand;
     public GameObject rightHand;
 
+    public GameObject vrController;
+    public GameObject vrHead;
+    public GameObject vrLHand;
+    public GameObject vrRHand;
+
     [SyncVar]
     public int score = 0;
     // Use this for initialization
@@ -30,6 +35,13 @@ public class NetworkPlayerBehaviour : NetworkBehaviour {
             transform.localPosition = Vector3.zero;
             CmdSpawnBody();
 
+            vrController = GameObject.Find("VRPlayer");
+            vrHead = vrController.transform.Find("SteamVRObjects/VRCamera").gameObject;
+            vrLHand = vrController.transform.Find("SteamVRObjects/LeftHand").gameObject;
+            vrRHand = vrController.transform.Find("SteamVRObjects/RightHand").gameObject;
+
+            vrController.transform.parent = GameObject.Find("Car(Clone)").transform;
+            vrController.transform.localPosition = Vector3.zero;
         }
     }
 	
@@ -48,9 +60,12 @@ public class NetworkPlayerBehaviour : NetworkBehaviour {
                 transform.position = pos;
             }
 
-            headset.transform.position = transform.position;
-            leftHand.transform.position = transform.position;
-            rightHand.transform.position = transform.position;
+            headset.transform.position = vrHead.transform.position;
+            headset.transform.rotation = vrHead.transform.rotation;
+            leftHand.transform.position = vrLHand.transform.position;
+            leftHand.transform.rotation = vrLHand.transform.rotation;
+            rightHand.transform.position = vrRHand.transform.position;
+            rightHand.transform.rotation = vrRHand.transform.rotation;
         }
 	}
     [Command]
