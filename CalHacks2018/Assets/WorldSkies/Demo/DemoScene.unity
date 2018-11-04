@@ -254,51 +254,47 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 398723372}
   m_CullTransparentMesh: 0
---- !u!1001 &1711455205
+--- !u!1001 &1855333899
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4151690017863764, guid: b6d65c562af7b284e91d16e8a3efcd56, type: 2}
+    - target: {fileID: 4183672898585256, guid: fc0e8527356dd7b4fa037962de7cd231, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.324233
+      value: -18.122847
       objectReference: {fileID: 0}
-    - target: {fileID: 4151690017863764, guid: b6d65c562af7b284e91d16e8a3efcd56, type: 2}
+    - target: {fileID: 4183672898585256, guid: fc0e8527356dd7b4fa037962de7cd231, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.17721796
+      value: -4.707094
       objectReference: {fileID: 0}
-    - target: {fileID: 4151690017863764, guid: b6d65c562af7b284e91d16e8a3efcd56, type: 2}
+    - target: {fileID: 4183672898585256, guid: fc0e8527356dd7b4fa037962de7cd231, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.2248373
+      value: 13.748461
       objectReference: {fileID: 0}
-    - target: {fileID: 4151690017863764, guid: b6d65c562af7b284e91d16e8a3efcd56, type: 2}
+    - target: {fileID: 4183672898585256, guid: fc0e8527356dd7b4fa037962de7cd231, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4151690017863764, guid: b6d65c562af7b284e91d16e8a3efcd56, type: 2}
+    - target: {fileID: 4183672898585256, guid: fc0e8527356dd7b4fa037962de7cd231, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4151690017863764, guid: b6d65c562af7b284e91d16e8a3efcd56, type: 2}
+    - target: {fileID: 4183672898585256, guid: fc0e8527356dd7b4fa037962de7cd231, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4151690017863764, guid: b6d65c562af7b284e91d16e8a3efcd56, type: 2}
+    - target: {fileID: 4183672898585256, guid: fc0e8527356dd7b4fa037962de7cd231, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4151690017863764, guid: b6d65c562af7b284e91d16e8a3efcd56, type: 2}
+    - target: {fileID: 4183672898585256, guid: fc0e8527356dd7b4fa037962de7cd231, type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1745974575437960, guid: b6d65c562af7b284e91d16e8a3efcd56, type: 2}
-      propertyPath: m_Name
-      value: Car Compiled
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b6d65c562af7b284e91d16e8a3efcd56, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: fc0e8527356dd7b4fa037962de7cd231, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1934022034
 GameObject:
