@@ -51,10 +51,8 @@ public class Hexagon_Gen : MonoBehaviour
             if (b.Contains(new Vector3(pos.x, 0, pos.y)))
             {
                 done.Add(coord);
-                GameObject prefab = Rand_Pillar();
-                GameObject hex = Instantiate(prefab, new Vector3(pos.x, Random.Range(-.5f, .5f) + hex_offset, pos.y), Quaternion.Euler(-90, 0, 0));
-                StartCoroutine(Rise(hex));
-                Destroy(hex, 5);
+
+                StartCoroutine(Rise(pos));
             }
             else if (Vector3.Distance(pos, b.center) > 10)
             {
@@ -132,11 +130,16 @@ public class Hexagon_Gen : MonoBehaviour
         }
     }
 
-    IEnumerator Rise (GameObject pillar) {
+    IEnumerator Rise (Vector2 pos) {
         int ticks = Random.Range(10, 30);
+        GameObject prefab = Rand_Pillar();
+        Vector3 spawn = new Vector3(pos.x, Random.Range(-.5f, .5f) + hex_offset, pos.y);
+        GameObject hex = Instantiate(prefab, spawn - new Vector3(0, .5f, 0), Quaternion.Euler(-90, 0, 0));
+        Destroy(hex, 5);
+
         for (int x = 0; x < ticks; x++)
         {
-            pillar.transform.position = new Vector3(pillar.transform.position.x, pillar.transform.position.y - ticks + x, pillar.transform.position.z);
+            hex.transform.position = spawn - new Vector3(0f, .5f * (1f - ((float)x)/ticks), 0f);
             yield return null;
         }
     }
