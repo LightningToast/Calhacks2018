@@ -24,9 +24,11 @@ GameObject:
   - component: {fileID: 135192218557766102}
   - component: {fileID: 54123138687657320}
   - component: {fileID: 114754853322878490}
+  - component: {fileID: 114371023172441498}
+  - component: {fileID: 114594062316970908}
   m_Layer: 0
   m_Name: PaintBall
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,6 +103,59 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114371023172441498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1770315574012648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 221
+    i1: 140
+    i2: 34
+    i3: 50
+    i4: 156
+    i5: 20
+    i6: 116
+    i7: 110
+    i8: 120
+    i9: 177
+    i10: 108
+    i11: 5
+    i12: 186
+    i13: 48
+    i14: 32
+    i15: 64
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
+--- !u!114 &114594062316970908
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1770315574012648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.033333335
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114754853322878490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paintPrefab: {fileID: 1407344114256844, guid: 654bcf3f16fc94418a284d471b33856b,
     type: 2}
+  sendingPlayer: {fileID: 0}
 --- !u!135 &135192218557766102
 SphereCollider:
   m_ObjectHideFlags: 1
