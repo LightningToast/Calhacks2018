@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShootPeriodically : MonoBehaviour {
 
-    public ProjectileGun gun;
+    public SimpleGun gun;
 
     public float timeShoot;
 
@@ -12,7 +12,7 @@ public class ShootPeriodically : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        gun = GetComponent<ProjectileGun>();
+        gun = GetComponent<SimpleGun>();
 	}
 	
 	// Update is called once per frame
